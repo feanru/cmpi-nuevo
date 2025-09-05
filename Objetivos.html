@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetivos - CMPI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/objetivos.css">
+</head>
+<body>
+    <div class="mosaic-grid">
+        <!-- Módulo Principal -->
+        <div class="module main-module" style="background-color: #1a1a1a;">
+            <div class="module-content">
+                <span class="label">NUESTRO PROPÓSITO</span>
+                <h1>Transformando el acceso a la salud en México</h1>
+                <div class="divider"></div>
+                <p class="highlight">CMPI nace para cerrar la brecha en el acceso a servicios de salud de calidad en comunidades desatendidas.</p>
+            </div>
+        </div>
+
+        <!-- Módulo de Imagen -->
+        <div class="module image-module">
+            <img src="img/objetivos/medico-comunidad.jpg" alt="Médico atendiendo en comunidad">
+            <div class="image-overlay">
+                <span class="location-tag"><i class="fas fa-map-marker-alt"></i> Comunidades rurales de México</span>
+                <div class="rating">
+                    <i class="fas fa-star"></i>
+                    <span>5.0</span>
+                    <span class="reviews">(128 reseñas)</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Módulo de Dato Grande -->
+        <div class="module data-module" style="background-color: #e12989;">
+            <div class="module-content">
+                <span class="label">COMUNIDADES IMPACTADAS</span>
+                <div class="big-number">50+</div>
+                <div class="data-subtext">En 15 estados de la república</div>
+                <div class="divider"></div>
+                <ul class="upcoming-list">
+                    <li><span class="highlight">Próximamente:</span> Oaxaca, Chiapas, Guerrero</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Módulo de Métrica -->
+        <div class="module metric-module" style="background-color: #f8f8f8;">
+            <div class="module-content">
+                <div class="metric-value">85%</div>
+                <div class="metric-label">Cobertura de servicios de salud</div>
+                <div class="metric-subtext">En comunidades atendidas*</div>
+                <div class="divider"></div>
+                <div class="metric-note">*Basado en datos de 2023-2024</div>
+            </div>
+        </div>
+
+        <!-- Módulo de Tarjeta Editorial -->
+        <div class="module editorial-module" style="background-color: #8675f7;">
+            <div class="module-content">
+                <h2>Nuestro compromiso</h2>
+                <p>Llevamos atención médica de calidad a donde más se necesita, rompiendo barreras geográficas y económicas.</p>
+                <div class="signature">#SaludParaTodos</div>
+            </div>
+        </div>
+
+        <!-- Módulo Social -->
+        <div class="module social-module" style="background-color: #ffffff;">
+            <div class="module-content">
+                <div class="social-proof">
+                    <div class="avatars">
+                        <div class="avatar"><img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Paciente"></div>
+                        <div class="avatar"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Paciente"></div>
+                        <div class="avatar"><img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Paciente"></div>
+                        <div class="avatar more">+1.2K</div>
+                    </div>
+                    <div class="social-text">Pacientes satisfechos este año</div>
+                </div>
+                <div class="divider"></div>
+                <div class="testimonial">
+                    <div class="quote">"El CMPI cambió la salud en nuestra comunidad"</div>
+                    <div class="author">- María G., Veracruz</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Módulo de Objetivo -->
+        <div class="module goal-module" style="background-color: #f8f8f8;">
+            <div class="module-content">
+                <div class="goal-number">01</div>
+                <h3>Acceso Universal</h3>
+                <p>Garantizar que todas las comunidades tengan acceso a servicios médicos básicos a menos de 30 minutos de distancia.</p>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 65%;"></div>
+                </div>
+                <div class="progress-label">65% de avance</div>
+            </div>
+        </div>
+
+        <!-- Módulo de Impacto -->
+        <div class="module impact-module" style="background-color: #1a1a1a; color: white;">
+            <div class="module-content">
+                <span class="label">NUESTRO IMPACTO</span>
+                <div class="impact-stats">
+                    <div class="stat">
+                        <div class="stat-number">100K+</div>
+                        <div class="stat-label">Consultas realizadas</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">85%</div>
+                        <div class="stat-label">Reducción en tiempo de espera</div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="impact-note">Datos actualizados al Q2 2024</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Efecto hover en módulos
+        document.querySelectorAll('.module').forEach(module => {
+            module.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-5px)';
+                this.style.boxShadow = '0 10px 30px rgba(0,0,0,0.15)';
+            });
+            
+            module.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
