@@ -430,6 +430,7 @@ p {
 
 .info-section:hover .icon-container {
     transform: translateY(-5px) scale(1.05);
+    background: transparent !important;
 }
 
 .info-section:hover .section-icon {
