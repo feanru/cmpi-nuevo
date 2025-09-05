@@ -1,3 +1,12 @@
+/* Variables */
+:root {
+    --primary-color: #3498db;
+    --accent-color: #e74c3c;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --gray-600: #6c757d;
+}
+
 /* Reset y estilos base */
 * {
     margin: 0;
@@ -32,6 +41,7 @@ body {
     background-attachment: fixed;
     z-index: -1;
     transform: translateZ(0);
+    background-color: #1a5276; /* Fallback color */
 }
 
 .parallax__foreground {
@@ -55,35 +65,92 @@ body {
 }
 
 /* Secciones de información */
-main {
+/* Grid Layout */
+.grid-container {
     position: relative;
     z-index: 1;
     background-color: #fff;
+    padding: 60px 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.grid-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 30px;
 }
 
 .info-section {
-    padding: 100px 0;
+    flex: 1 1 300px;
+    max-width: 400px;
     position: relative;
-    overflow: hidden;
+    transition: all 0.4s ease;
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
-.info-section:nth-child(even) {
-    background-color: #f8f9fa;
+.card {
+    background: white;
+    border-radius: 15px;
+    padding: 40px 25px;
+    height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: center;
+.info-section:hover .card {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.info-section:nth-child(odd) .card {
+    background: linear-gradient(145deg, #f8f9fa, #ffffff);
+}
+
+.info-section:nth-child(even) .card {
+    background: white;
+}
+
+/* Estilos para los iconos */
+.icon-container {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 25px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.icon-container i {
+    font-size: 2.5rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.info-section:hover .icon-container {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.info-section:hover .icon-container i {
+    transform: scale(1.1);
 }
 
 h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-    color: #2c3e50;
+    font-size: 2.2rem;
+    margin: 15px 0 20px;
+    color: var(--dark-color);
     position: relative;
     display: inline-block;
+    padding: 0 15px;
 }
 
 h2::after {
@@ -99,9 +166,16 @@ h2::after {
 
 p {
     font-size: 1.1rem;
-    color: #555;
-    margin-top: 20px;
+    color: var(--gray-600);
+    margin: 20px auto 0;
     line-height: 1.8;
+    max-width: 700px;
+    padding: 0 20px;
+}
+
+.titleobjetivos {
+    text-align: center;
+    width: 100%;
 }
 
 /* Efectos de desplazamiento */
@@ -134,7 +208,37 @@ p {
 .info-section:nth-child(6) { animation-delay: 1.2s; }
 
 /* Responsive */
+/* Efectos de hover para móviles */
+@media (hover: hover) {
+    .info-section:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(5px);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .info-section {
+        flex: 1 1 45%;
+        max-width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
+    .grid-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .info-section {
+        flex: 1 1 100%;
+        max-width: 100%;
+        padding: 10px;
+    }
+    
+    .card {
+        padding: 30px 20px;
+    }
     h2 {
         font-size: 2rem;
     }
@@ -145,5 +249,24 @@ p {
     
     .floating-icon img {
         width: 100px;
+    }
+    
+    .icon-container {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .icon-container i {
+        font-size: 1.8rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin: 15px 0;
+    }
+    
+    p {
+        font-size: 0.95rem;
+        padding: 0 10px;
     }
 }
