@@ -90,6 +90,8 @@ body {
     transition: all 0.4s ease;
     padding: 20px;
     margin-bottom: 20px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
 .card {
@@ -98,13 +100,20 @@ body {
     padding: 40px 25px;
     height: 100%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                opacity 0.4s ease;
     border: 1px solid rgba(0, 0, 0, 0.05);
+    will-change: transform, opacity;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    position: relative;
+    z-index: 1;
 }
 
 .info-section:hover .card {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: translateY(-10px) translateZ(20px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 .info-section:nth-child(odd) .card {
@@ -115,33 +124,35 @@ body {
     background: white;
 }
 
-/* Estilos para los iconos */
+/* Estilos para las imágenes de las secciones */
 .icon-container {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    width: 200px;
+    height: 200px;
+    background: transparent;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 25px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    padding: 10px;
 }
 
-.icon-container i {
-    font-size: 2.5rem;
-    color: white;
+.section-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
 .info-section:hover .icon-container {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.info-section:hover .icon-container i {
+.info-section:hover .section-icon {
     transform: scale(1.1);
+    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.15));
 }
 
 h2 {
@@ -161,7 +172,7 @@ h2::after {
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background-color: #3498db;
+    background-color: #e12989;
 }
 
 p {
@@ -224,7 +235,12 @@ p {
     }
 }
 
+/* Ajustes para móviles */
 @media (max-width: 768px) {
+    .icon-container {
+        width: 150px;
+        height: 150px;
+    }
     .grid-row {
         flex-direction: column;
         align-items: center;
@@ -252,12 +268,13 @@ p {
     }
     
     .icon-container {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
     }
     
-    .icon-container i {
-        font-size: 1.8rem;
+    .section-icon {
+        max-width: 100%;
+        height: auto;
     }
     
     h2 {

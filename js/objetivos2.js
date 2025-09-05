@@ -1,35 +1,60 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Efecto parallax
+    // Elementos del parallax
     const parallaxBackground = document.querySelector('.parallax__background');
     const floatingIcon = document.querySelector('.floating-icon');
+    const cards = document.querySelectorAll('.card');
     const infoSections = document.querySelectorAll('.info-section');
     
-    // Ajustar la posición inicial del fondo
+    // Ajustar la posición inicial
     function setInitialPosition() {
         const scrollY = window.scrollY;
-        parallaxBackground.style.transform = `translateY(${scrollY * 0.5}px)`;
-        floatingIcon.style.transform = `translateY(${-scrollY * 0.2}px)`;
+        if (parallaxBackground) {
+            parallaxBackground.style.transform = `translateY(${scrollY * 0.5}px)`;
+        }
+        if (floatingIcon) {
+            floatingIcon.style.transform = `translateY(${-scrollY * 0.2}px)`;
+        }
     }
     
-    // Efecto de paralaje al hacer scroll
-    window.addEventListener('scroll', function() {
+    // Efecto de paralaje suave
+    function handleScroll() {
         const scrollY = window.scrollY;
         
-        // Mover el fondo a diferente velocidad
+        // Mover el fondo
         if (parallaxBackground) {
             parallaxBackground.style.transform = `translateY(${scrollY * 0.5}px)`;
         }
         
-        // Mover el ícono en dirección opuesta
+        // Mover el ícono flotante
         if (floatingIcon) {
             floatingIcon.style.transform = `translateY(${-scrollY * 0.2}px)`;
-            
-            // Efecto de opacidad al hacer scroll
             const opacity = 1 - (scrollY / 500);
             floatingIcon.style.opacity = opacity > 0 ? opacity : 0;
         }
         
-        // Animación de las secciones al hacer scroll
+        // Efecto parallax en las tarjetas
+        cards.forEach((card, index) => {
+            const cardRect = card.getBoundingClientRect();
+            const cardCenter = cardRect.top + (cardRect.height / 2);
+            const windowCenter = window.innerHeight / 2;
+            const distanceFromCenter = cardCenter - windowCenter;
+            
+            // Aplicar transformación basada en la posición de desplazamiento
+            // con diferentes velocidades para cada tarjeta
+            const speed = 0.1 + (index * 0.05);
+            const offset = distanceFromCenter * speed;
+            
+            // Aplicar transformación solo si la tarjeta está visible
+            if (cardRect.top < window.innerHeight && cardRect.bottom > 0) {
+                card.style.transform = `translateY(${offset}px)`;
+                
+                // Efecto de opacidad suave
+                const opacity = 1 - Math.abs(distanceFromCenter / window.innerHeight);
+                card.style.opacity = Math.max(0.7, opacity);
+            }
+        });
+        
+        // Animación de aparición de las secciones
         infoSections.forEach(section => {
             const sectionTop = section.getBoundingClientRect().top;
             const windowHeight = window.innerHeight;
@@ -39,6 +64,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 section.style.transform = 'translateY(0)';
             }
         });
+    }
+    
+    // Configurar el evento de scroll
+    let ticking = false;
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(function() {
+                handleScroll();
+                ticking = false;
+            });
+            ticking = true;
+        }
     });
     
     // Inicializar posiciones
@@ -48,7 +85,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
-            
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
             
@@ -62,7 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Asegurar que el fondo ocupe toda la pantalla inicialmente
+    // Ajustar altura del parallax
     function adjustParallaxHeight() {
         const parallax = document.querySelector('.parallax');
         if (parallax) {
@@ -70,7 +106,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // Ajustar al cargar y al redimensionar
+    // Inicialización
     window.addEventListener('resize', adjustParallaxHeight);
     adjustParallaxHeight();
+    
+    // Forzar un renderizado inicial
+    setTimeout(handleScroll, 100);
 });
