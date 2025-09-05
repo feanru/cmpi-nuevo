@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Centro de Medicina Preventiva Integral - Prevención para todos. Hoy.">
+    <title>CMPI - Centro de Medicina Preventiva Integral</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style4.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">CMPI</a>
+            <div class="nav-links">
+                <a href="#red-cmpi">Red CMPI</a>
+                <a href="#objetivos">Objetivos</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#comparador">Comparador</a>
+                <a href="#esquema">Esquema</a>
+                <a href="#contacto" class="btn btn-outline">Contacto</a>
+            </div>
+            <button class="hamburger" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="progress-bar"></div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="video-background">
+            <div class="hero-image">
+                <img src="img/foto1 (3).jpeg" alt="Centro médico CMPI">
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="animate-on-scroll">Prevención para todos. <span class="highlight">Hoy.</span></h1>
+            <p class="animate-on-scroll">Impulsando el acceso a la salud preventiva de calidad en toda la región</p>
+            <div class="cta-buttons">
+                <a href="#red-cmpi" class="btn btn-primary">Explorar la Red</a>
+                <a href="#contacto" class="btn btn-secondary">Quiero un CMPI</a>
+            </div>
+        </div>
+        <a href="#red-cmpi" class="scroll-indicator" aria-label="Desplazarse hacia abajo">
+            <span></span>
+        </a>
+    </header>
+
+    <!-- Sección Red CMPI -->
+    <section id="red-cmpi" class="section">
+        <div class="container">
+            <h2>Nuestra Red de Centros</h2>
+            <p class="section-subtitle">Modelos adaptados a cada necesidad comunitaria</p>
+            
+            <div class="card-grid">
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">
+                        <i class="fas fa-clinic-medical"></i>
+                    </div>
+                    <h3>CMPI Micro</h3>
+                    <p>Atención básica para comunidades pequeñas con servicios esenciales de prevención.</p>
+                    <button class="btn btn-text compare-btn" data-model="micro">Comparar centros</button>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <h3>CMPI Básico</h3>
+                    <p>Servicios preventivos integrales para zonas urbanas en desarrollo.</p>
+                    <button class="btn btn-text compare-btn" data-model="basico">Comparar centros</button>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">
+                        <i class="fas fa-hospital-alt"></i>
+                    </div>
+                    <h3>CMPI Intermedio</h3>
+                    <p>Atención especializada y diagnóstico avanzado para poblaciones medianas.</p>
+                    <button class="btn btn-text compare-btn" data-model="intermedio">Comparar centros</button>
+                </div>
+                
+                <div class="card animate-on-scroll">
+                    <div class="card-icon">
+                        <i class="fas fa-hospital-user"></i>
+                    </div>
+                    <h3>CMPI Mayor</h3>
+                    <p>Centro de referencia con tecnología de punta para prevención y diagnóstico temprano.</p>
+                    <button class="btn btn-text compare-btn" data-model="mayor">Comparar centros</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Objetivos -->
+    <section id="objetivos" class="section bg-light">
+        <div class="container">
+            <h2>Nuestros Objetivos</h2>
+            <p class="section-subtitle">Impacto medible en la salud preventiva</p>
+            
+            <div class="counters">
+                <div class="counter-item animate-on-scroll">
+                    <div class="counter" data-target="150">0</div>
+                    <p>Centros instalados</p>
+                </div>
+                <div class="counter-item animate-on-scroll">
+                    <div class="counter" data-target="500000">0</div>
+                    <p>Pacientes atendidos</p>
+                </div>
+                <div class="counter-item animate-on-scroll">
+                    <div class="counter" data-target="95">0</div>
+                    <p>% de satisfacción</p>
+                </div>
+            </div>
+            
+            <div class="map-container">
+                <div id="map" class="interactive-map">
+                    <img src="img/foto1 (1).jpeg" alt="Centro de salud CMPI" class="map-image">
+                    <!-- Pines interactivos se agregarán con JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Servicios -->
+    <section id="servicios" class="section">
+        <div class="services-container">
+            <div class="service-panels">
+                <div class="service-panel active" data-service="prevencion">
+                    <div class="service-content">
+                        <h3>Medicina Preventiva</h3>
+                        <div class="service-image">
+                            <img src="img/foto1 (2).jpeg" alt="Servicios de medicina preventiva">
+                        </div>
+                        <ul>
+                            <li>Chequeos médicos completos</li>
+                            <li>Detección temprana de enfermedades</li>
+                            <li>Programas de vacunación</li>
+                        </ul>
+                    </div>
+                    <div class="service-media">
+                        <img src="images/servicio-prevencion.jpg" alt="Servicio de medicina preventiva">
+                    </div>
+                </div>
+                
+                <!-- Más paneles de servicios se agregarán aquí -->
+                
+            </div>
+            <div class="service-nav">
+                <button class="service-nav-btn active" data-service="prevencion">
+                    <span>01</span> Medicina Preventiva
+                </button>
+                <button class="service-nav-btn" data-service="diagnostico">
+                    <span>02</span> Diagnóstico
+                </button>
+                <button class="service-nav-btn" data-service="rehabilitacion">
+                    <span>03</span> Rehabilitación
+                </button>
+                <button class="service-nav-btn" data-service="educacion">
+                    <span>04</span> Educación
+                </button>
+                <button class="service-nav-btn" data-service="investigacion">
+                    <span>05</span> Investigación
+                </button>
+                <button class="service-nav-btn" data-service="telemedicina">
+                    <span>06</span> Telemedicina
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparador de Modelos -->
+    <section id="comparador" class="section bg-light">
+        <div class="container">
+            <h2>Comparador de Modelos</h2>
+            <p class="section-subtitle">Encuentra el centro CMPI que mejor se adapte a tus necesidades</p>
+            
+            <div class="view-toggle">
+                <button class="view-option active" data-view="tabla">Tabla</button>
+                <button class="view-option" data-view="tarjetas">Tarjetas</button>
+                <button class="view-option" data-view="mapa">Mapa</button>
+            </div>
+            
+            <div class="comparison-container">
+                <div class="comparison-view active" id="tabla-view">
+                    <div class="table-responsive">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Modelo</th>
+                                    <th>Población</th>
+                                    <th>Superficie</th>
+                                    <th>Servicios</th>
+                                    <th>Personal</th>
+                                    <th>Despliegue</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Micro</td>
+                                    <td>Hasta 5,000</td>
+                                    <td>100-150 m²</td>
+                                    <td>Básicos</td>
+                                    <td>2-3 personas</td>
+                                    <td>3-4 semanas</td>
+                                </tr>
+                                <!-- Más filas para otros modelos -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="comparison-view" id="tarjetas-view">
+                    <div class="cards-view">
+                        <!-- Tarjetas se generarán con JavaScript -->
+                    </div>
+                </div>
+                
+                <div class="comparison-view" id="mapa-view">
+                    <div class="map-view">
+                        <!-- Mapa de comparación se cargará aquí -->
+                        <img src="images/comparison-map.jpg" alt="Mapa de comparación de modelos" class="map-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Esquema de Acción -->
+    <section id="esquema" class="section">
+        <div class="container">
+            <h2>Nuestro Proceso</h2>
+            <p class="section-subtitle">Así es como llevamos la prevención a tu comunidad</p>
+            
+            <div class="timeline">
+                <div class="timeline-progress"></div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>1. Evaluación Inicial</h3>
+                        <p>Análisis de necesidades y viabilidad en la ubicación propuesta.</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2. Acuerdo de Colaboración</h3>
+                        <p>Firmamos un convenio con las autoridades locales.</p>
+                    </div>
+                </div>
+                
+                <!-- Más pasos de la línea de tiempo -->
+                
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>6. Seguimiento y Evaluación</h3>
+                        <p>Monitoreo continuo y mejora de servicios.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Puesta en Marcha -->
+    <section id="puesta-marcha" class="section bg-light">
+        <div class="container">
+            <div class="two-columns">
+                <div class="column">
+                    <h2>Puesta en Marcha</h2>
+                    <p>Todo lo que necesitas para implementar un CMPI en tu comunidad.</p>
+                    
+                    <div class="checklist">
+                        <h3>Requisitos Normativos</h3>
+                        <ul>
+                            <li>Permisos sanitarios y de construcción</li>
+                            <li>Personal calificado</li>
+                            <li>Equipamiento básico</li>
+                            <li>Protocolos de atención</li>
+                            <li>Sistema de gestión de calidad</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="column">
+                    <div class="partners">
+                        <h3>Nuestros Aliados</h3>
+                        <div class="partner-logos">
+                            <img src="images/partner1.png" alt="Aliado 1">
+                            <img src="images/partner2.png" alt="Aliado 2">
+                            <img src="images/partner3.png" alt="Aliado 3">
+                        </div>
+                        <p>Colaboramos con las principales instituciones de salud y tecnología.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="contacto" class="cta-section">
+        <div class="container">
+            <h2>¿Listo para llevar la prevención a tu comunidad?</h2>
+            <p>Contáctanos para más información sobre cómo implementar un CMPI en tu localidad.</p>
+            
+            <div class="cta-buttons">
+                <button id="solicitar-info" class="btn btn-primary btn-large">Solicitar Información</button>
+                <button id="agendar-llamada" class="btn btn-secondary btn-large">Agendar Llamada</button>
+            </div>
+            
+            <div class="contact-info">
+                <p>O escríbenos a: <a href="mailto:info@cmpi.salud">info@cmpi.salud</a></p>
+                <p>Teléfono: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Contacto -->
+    <div id="contact-modal" class="modal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Cerrar">&times;</button>
+            <h3 id="modal-title">Solicitar Información</h3>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nombre completo</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Teléfono</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CMPI</h3>
+                    <p>Centro de Medicina Preventiva Integral</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Enlaces Rápidos</h4>
+                        <ul>
+                            <li><a href="#red-cmpi">Nuestra Red</a></li>
+                            <li><a href="#servicios">Servicios</a></li>
+                            <li><a href="#comparador">Comparador</a></li>
+                            <li><a href="#esquema">Proceso</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Contacto</h4>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> Av. Principal 123, Ciudad</li>
+                            <li><i class="fas fa-phone"></i> +1 (234) 567-890</li>
+                            <li><i class="fas fa-envelope"></i> info@cmpi.salud</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Síguenos</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 CMPI. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Términos de Uso</a>
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Aviso Legal</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script4.js" defer></script>
+    <!-- GSAP y ScrollTrigger opcionales -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+        // Inicialización condicional de GSAP ScrollTrigger si está disponible
+        if (typeof gsap !== 'undefined' && gsap.registerPlugin) {
+            gsap.registerPlugin(ScrollTrigger);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMPI - Centro Médico de Prevención Integral</title>
+    <link rel="stylesheet" href="css/style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Hero Section with Video Background -->
+    <section class="hero">
+        <div class="video-background">
+            <video autoplay muted loop id="hero-video">
+                <source src="https://player.vimeo.com/external/123456789.hd.mp4" type="video/mp4">
+                <!-- Replace with actual video source -->
+            </video>
+            <div class="overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Salud accesible para todas las comunidades</h1>
+            <p>Transformando vidas a través de un nuevo modelo de atención médica preventiva</p>
+            <a href="#solucion" class="cta-button">Descubre la solución</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Vision Section -->
+    <section class="vision" id="vision">
+        <div class="container">
+            <h2>La visión del CMPI</h2>
+            <div class="vision-content">
+                <div class="vision-text" data-aos="fade-right">
+                    <h3>Un nuevo modelo de atención preventiva para todos</h3>
+                    <p>En el CMPI, creemos que la salud preventiva es un derecho, no un privilegio. Nuestro modelo está diseñado para llegar a las comunidades más necesitadas con atención médica de calidad.</p>
+                </div>
+                <div class="vision-features">
+                    <div class="feature" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-heartbeat"></i>
+                        <h4>Atención integral</h4>
+                        <p>Cuidado médico completo en un solo lugar</p>
+                    </div>
+                    <div class="feature" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-hand-holding-heart"></i>
+                        <h4>Enfoque comunitario</h4>
+                        <p>Diseñado por y para la comunidad</p>
+                    </div>
+                    <div class="feature" data-aos="fade-up" data-aos-delay="300">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Impacto medible</h4>
+                        <p>Resultados que transforman vidas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Impact - Before/After Slider -->
+    <section class="community-impact" id="impacto">
+        <div class="container">
+            <h2>Cómo transformamos comunidades</h2>
+            <div class="before-after-container">
+                <div class="before-after-slider">
+                    <div class="before">
+                        <img src="images/before.jpg" alt="Comunidad antes del CMPI">
+                        <div class="label">Antes</div>
+                    </div>
+                    <div class="after">
+                        <img src="images/after.jpg" alt="Comunidad después del CMPI">
+                        <div class="label">Después</div>
+                    </div>
+                    <div class="slider-handle">
+                        <div class="slider-line"></div>
+                        <div class="slider-button">
+                            <i class="fas fa-arrows-alt-h"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="impact-stats">
+                    <div class="stat">
+                        <span class="number" data-count="85">0</span>%
+                        <p>Reducción en tiempo de espera</p>
+                    </div>
+                    <div class="stat">
+                        <span class="number" data-count="90">0</span>%
+                        <p>Satisfacción de pacientes</p>
+                    </div>
+                    <div class="stat">
+                        <span class="number" data-count="70">0</span>%
+                        <p>Mejora en acceso a salud</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <h2>Nuestros servicios como solución</h2>
+            <div class="services-grid">
+                <div class="service-card" data-aos="zoom-in">
+                    <div class="problem">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Dolores crónicos sin atención</h3>
+                    </div>
+                    <div class="solution">
+                        <i class="fas fa-arrow-right"></i>
+                        <h3>Consulta externa accesible</h3>
+                        <p>Diagnóstico y tratamiento para condiciones crónicas</p>
+                    </div>
+                </div>
+                <!-- More service cards will be added here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Map Section -->
+    <section class="cmpi-models" id="modelos">
+        <div class="container">
+            <h2>Modelos de centros</h2>
+            <div class="map-container">
+                <div class="map" id="interactive-map">
+                    <!-- Interactive map will be rendered here by JavaScript -->
+                </div>
+                <div class="map-legend">
+                    <h3>Nuestros modelos</h3>
+                    <ul>
+                        <li data-model="basic">CMPI Básico</li>
+                        <li data-model="standard">CMPI Estándar</li>
+                        <li data-model="premium">CMPI Premium</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>¿Listo para llevar un CMPI a tu comunidad?</h2>
+            <p>Únete a nuestra red de salud comunitaria y sé parte del cambio</p>
+            <a href="#contacto" class="cta-button">Quiero llevar un CMPI a mi comunidad</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CMPI</h3>
+                    <p>Centro Médico de Prevención Integral</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces rápidos</h4>
+                    <ul>
+                        <li><a href="#vision">Visión</a></li>
+                        <li><a href="#impacto">Impacto</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#modelos">Modelos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p>info@cmpi.org</p>
+                    <p>+1 234 567 890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CMPI. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/script3.js"></script>
+</body>
+</html>
