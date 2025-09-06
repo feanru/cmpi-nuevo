@@ -417,6 +417,7 @@ p {
     justify-content: center;
     margin: 0 auto 25px;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     overflow: hidden;
     padding: 0;
 }
@@ -426,17 +427,16 @@ p {
     height: 100%;
     object-fit: contain;
     transition: all 0.3s ease;
-    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
 .info-section:hover .icon-container {
     transform: translateY(-5px) scale(1.05);
     background: transparent !important;
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
 
 .info-section:hover .section-icon {
     transform: scale(1.1);
-    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.15));
 }
 
 h2 {
