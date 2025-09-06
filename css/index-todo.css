@@ -303,14 +303,17 @@ p {
 /* Secciones de información */
 /* Grid Layout */
 .seccion3 {
+    display: flex;      /* permite que el hijo use height: 100% */
+    align-items: stretch;
     position: relative;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
     background: url('../img/fondo.png') center/cover fixed;
     background-attachment: fixed;
     background-size: cover;
     background-position: center;
     z-index: 0;
+    height: auto;
 }
 
 .seccion3::before {
@@ -327,14 +330,17 @@ p {
 .grid-container {
     position: relative;
     z-index: 1;
-    padding: 100px 20px;
     max-width: 1400px;
-    margin: 50px auto;
+    /* margin: 50px auto; */
     width: 90%;
     box-sizing: border-box;
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
+    flex: 1;            /* ocupa todo el alto disponible */
+    height: 100%;       /* rellena el section */
+    margin: 0;          /* opcional: quita el corte por márgenes */
+    padding: 100px 20px; /* puedes ajustar este padding */
 }
 
 .grid-row {
