@@ -359,6 +359,19 @@ p {
     flex-direction: column;
 }
 
+.info-section:hover .card {
+    transform: translateY(-10px) translateZ(20px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+.info-section:nth-child(odd) .card {
+    background: linear-gradient(145deg, #f8f9fa, #ffffff);
+}
+
+.info-section:nth-child(even) .card {
+    background: white;
+}
+
 .card {
     background: white;
     border-radius: 15px;
@@ -393,33 +406,19 @@ p {
     margin-bottom: 15px;
 }
 
-.info-section:hover .card {
-    transform: translateY(-10px) translateZ(20px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
-}
 
-.info-section:nth-child(odd) .card {
-    background: linear-gradient(145deg, #f8f9fa, #ffffff);
-}
-
-.info-section:nth-child(even) .card {
-    background: white;
-}
 
 /* Estilos para las imágenes de las secciones */
 .icon-container {
     width: 200px;
     height: 200px;
-    background: transparent;
-    border-radius: 50%;
+    background-color: #e12989;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto 25px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    overflow: hidden;
-    padding: 0;
+    padding: 10px;
 }
 
 .section-icon {
@@ -427,16 +426,16 @@ p {
     height: 100%;
     object-fit: contain;
     transition: all 0.3s ease;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
 }
 
 .info-section:hover .icon-container {
     transform: translateY(-5px) scale(1.05);
-    background: transparent !important;
-    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
 }
 
 .info-section:hover .section-icon {
     transform: scale(1.1);
+    filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.15));
 }
 
 h2 {
@@ -499,7 +498,6 @@ h2::after {
 /* Efectos de hover para móviles */
 @media (hover: hover) {
     .info-section:hover {
-        background-color: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(5px);
     }
 }
