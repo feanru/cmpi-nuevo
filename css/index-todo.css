@@ -417,7 +417,8 @@ p {
     justify-content: center;
     margin: 0 auto 25px;
     transition: all 0.3s ease;
-    padding: 10px;
+    overflow: hidden;
+    padding: 0;
 }
 
 .section-icon {
