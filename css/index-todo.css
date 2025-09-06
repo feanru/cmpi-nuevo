@@ -412,7 +412,6 @@ p {
 .icon-container {
     width: 200px;
     height: 200px;
-    background-color: #e12989;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -430,7 +429,7 @@ p {
 }
 
 .info-section:hover .icon-container {
-    transform: translateY(-5px) scale(1.05);
+    transform: translateY(-5px) scale(1.15);
 }
 
 .info-section:hover .section-icon {
