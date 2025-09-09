@@ -25,6 +25,203 @@ h1 {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
+/* Ensure html and body take full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* -------------------------------------- HERO SECTION -------------------------------------- */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(224, 40, 136, 0.6)),  
+                url('../img/home.jpg') no-repeat center center/cover;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+    box-sizing: border-box;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 4.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    letter-spacing: -0.5px;
+}
+
+/* Responsive adjustments for the hero title */
+@media (max-width: 992px) {
+    .hero-text h1 {
+        font-size: 3.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text h1 {
+        font-size: 3rem;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+    max-width: 90%;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background-color: #e12989;
+    color: rgb(255, 255, 255);
+    border: 2px solid #e12989;
+    transition: all 0.3s ease;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 1.1rem;
+    text-shadow: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: rgb(255, 255, 255);
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    font-size: 1.1rem;
+    text-shadow: none;
+    backdrop-filter: blur(20px);
+}
+
+.btn-primary:hover {
+    background-color: #c2185b;
+    border-color: #c2185b;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: rgba(225, 41, 137, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+    min-height: 500px;
+    max-height: 600px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.4);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-text {
+        max-width: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+}
+
 .seccion1 { background-color: #FF6B6B; }
 .seccion2 { background-color: #4ECDC4; }
 .seccion3 { background-color: #45B7D1; }
@@ -153,6 +350,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+    max-height: 50%;
 }
 
 .marcha-image img {
@@ -360,7 +558,6 @@ p {
     cursor: pointer;
     border: 2px solid var(--primary-color);
     background: transparent;
-    color: var(--primary-color);
     font-size: 0.9rem;
 }
 
@@ -555,7 +752,7 @@ p {
     background: white;
     border-radius: 15px;
     width: 90%;
-    max-width: 800px;
+    max-width: 1000px;
     max-height: 90vh;
     overflow-y: auto;
     position: relative;
@@ -592,6 +789,7 @@ p {
 .modal-image {
     width: 100%;
     height: 300px;
+    min-width: 300px;
     overflow: hidden;
     border-radius: 15px 15px 0 0;
 }
@@ -721,7 +919,7 @@ p {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(43, 41, 41, 0.9);
+    background: rgba(225, 41, 137, 0.25)
     z-index: -1;
 }
 
