@@ -1,3 +1,119 @@
+/* Blog Section */
+.blog-section {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+}
+
+.blog-section .section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.blog-section .section-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.blog-section .section-header p {
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.blog-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-image img {
+    transform: scale(1.05);
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-content h3 {
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+.blog-content p {
+    color: #666;
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    color: #e12989;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.read-more i {
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover {
+    color: #b81f6a;
+}
+
+.read-more:hover i {
+    transform: translateX(5px);
+}
+
+@media (max-width: 768px) {
+    .blog-grid {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .blog-section {
+        padding: 3rem 0;
+    }
+    
+    .blog-section .section-header h2 {
+        font-size: 2rem;
+    }
+}
+
 /* Hero Logo */
 .hero-text img.hero-img {
     max-width: 200px;
@@ -65,6 +181,24 @@
 .nav-link:hover {
     color: #e12989;
 }
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:not(.login-btn):hover {
+    background-color: rgba(225, 41, 137, 0.1);
+    transform: scale(1.2);
+}
+
 
 .login-btn {
     background-color: #e12989;
@@ -139,6 +273,416 @@ html, body {
     margin: 0;
     padding: 0;
 }
+/* -------------------------------------- FORMULARIO -------------------------------------- */
+
+
+.form-section {
+    background-color: #f8f9fa;
+    padding: 5rem 0;
+}
+
+.form-container {
+    background: white;
+    border-radius: 15px;
+    padding: 3rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-header h1 {
+    color: #e12989;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: none;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.form-section-title {
+    color: #333;
+    margin: 2rem 0 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #e12989;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #444;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #e12989;
+    box-shadow: 0 0 0 3px rgba(225, 41, 137, 0.2);
+    outline: none;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-option input[type="radio"] {
+    margin: 0;
+}
+
+.checkbox-group {
+    margin-top: 1rem;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.checkbox-option input[type="checkbox"] {
+    margin-top: 0.25rem;
+    flex-shrink: 0;
+}
+
+.checkbox-option label {
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+.btn-submit {
+    background-color: #e12989;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: block;
+    margin: 3rem auto 0;
+    width: fit-content;
+}
+
+.btn-submit:hover {
+    background-color: #c2185b;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* -------------------------------------- FORMULARIO PACIENTE -------------------------------------- */
+
+
+.form-section {
+    background-color: #f8f9fa;
+    padding: 5rem 0;
+    min-height: 100vh;
+}
+
+.form-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.form-header h1 {
+    color: #e12989;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.form-section-title {
+    color: #333;
+    margin: 2rem 0 1.5rem;
+    font-size: 1.5rem;
+    border-bottom: 2px solid #e12989;
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #444;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #e12989;
+    box-shadow: 0 0 0 3px rgba(225, 41, 137, 0.2);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.radio-option {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.radio-option input[type="radio"] {
+    margin: 0;
+}
+
+.submit-btn {
+    background-color: #e12989;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    margin: 3rem auto 0;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #c41e75;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 2rem 1.5rem;
+        margin: 1rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-header h1 {
+        font-size: 2rem;
+    }
+}
+
+/* -------------------------------------- GALERIA CLINICAS -------------------------------------- */
+
+.clinics-gallery {
+    padding: 5rem 0;
+    background-color: #f9f9f9;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #e12989;
+    margin-bottom: 1rem;
+}
+
+.section-subtitle {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+}
+
+.clinics-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.clinic-card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.clinic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.clinic-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.clinic-info {
+    padding: 1.5rem;
+}
+
+.clinic-name {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.clinic-detail {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 0.8rem;
+    color: #34495e;
+}
+
+.clinic-detail i {
+    margin-right: 10px;
+    color: #e12989;
+    margin-top: 3px;
+}
+
+.clinic-description {
+    margin-top: 1rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .clinics-container {
+        grid-template-columns: 1fr;
+        padding: 0 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
 
 /* -------------------------------------- HERO SECTION -------------------------------------- */
 .hero-section {
@@ -348,7 +892,7 @@ html, body {
 .marcha-content {
     display: flex;
     gap: 3rem;
-    align-items: flex-start;
+    align-items: stretch; /* Cambiado de flex-start a stretch para que los hijos se estiren */
     margin-top: 3rem;
 }
 
@@ -451,7 +995,6 @@ html, body {
     flex: 1;
     position: relative;
     border-radius: var(--border-radius);
-    max-height: 400px;
     overflow: hidden;
     box-shadow: var(--shadow);
     min-height: 400px;
@@ -459,14 +1002,13 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
-    max-height: 100%;
 }
 
 .marcha-image img {
     width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: contain;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
 }
 
 .cobertura {
@@ -559,7 +1101,12 @@ html, body {
     
     .marcha-image {
         width: 100%;
+        height: 300px; /* Altura fija para móviles */
         margin-top: 2rem;
+    }
+    
+    .marcha-image img {
+        height: 100%;
     }
 }
 
@@ -677,6 +1224,7 @@ p {
     color: white;
     transform: translateY(-2px);
     box-shadow: var(--shadow);
+    scale: 1.2;
 }
 
 /* ===== Sección de Servicios ===== */
@@ -1247,13 +1795,14 @@ h2::after {
     box-shadow: var(--shadow);
     transition: var(--transition);
     position: relative;
-    border: 1px solid var(--gray-200);
+    border: 2px solid var(--gray-200);
 }
 
 .timeline-item:hover .timeline-content {
     transform: translateY(-5px);
     box-shadow: var(--shadow-lg);
     border-color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.8);
 }
 
 .timeline-item:nth-child(odd) .timeline-content::after {

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - CMPI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index-todo.css">
+    <style>
+        /* Blog Section Styles */
+        .blog-section {
+            padding: 5rem 0;
+            background-color: #f9f9f9;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            color: #e12989;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-date {
+            color: #e12989;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .blog-title {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        .blog-excerpt {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            color: #e12989;
+            font-weight: 500;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .read-more:hover {
+            color: #c41e72;
+        }
+
+        .read-more i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+
+        .view-all {
+            display: inline-block;
+            margin-top: 3rem;
+            padding: 12px 30px;
+            background-color: #e12989;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid #e12989;
+        }
+
+        .view-all:hover {
+            background-color: transparent;
+            color: #e12989;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index-todo.html" class="nav-logo">CMPI</a>
+                <div class="nav-links">
+                    <a href="formulario-paciente.html" class="nav-link">Paciente</a>
+                    <a href="formulario-cmpi.html" class="nav-link">Solicitar CMPI</a>
+                    <a href="galeria-clinicas.html" class="nav-link">Clínicas</a>
+                    <a href="login.html" class="nav-link login-btn">Iniciar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Section -->
+    <section class="blog-section">
+        <div class="blog-container">
+            <div class="section-header">
+                <h2>Nuestro Blog</h2>
+                <p>Descubre artículos útiles sobre salud, bienestar y consejos médicos de nuestros especialistas.</p>
+            </div>
+            
+            <div class="blog-grid">
+                <!-- Blog Post 1 -->
+                <article class="blog-card">
+                    <img src="img/salud1.png" alt="Consejos para una vida saludable" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-date">10 de Septiembre, 2023</span>
+                        <h3 class="blog-title">10 Consejos para una Vida Saludable</h3>
+                        <p class="blog-excerpt">Descubre cómo pequeños cambios en tu rutina diaria pueden tener un gran impacto en tu salud y bienestar general.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article class="blog-card">
+                    <img src="img/nutricion.jpeg" alt="Nutrición balanceada" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-date">28 de Agosto, 2023</span>
+                        <h3 class="blog-title">Guía de Alimentación Balanceada</h3>
+                        <p class="blog-excerpt">Aprende a crear comidas nutritivas y deliciosas que beneficien tu salud física y mental.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article class="blog-card">
+                    <img src="img/capacitacion.png" alt="Ejercicio en casa" class="blog-image">
+                    <div class="blog-content">
+                        <span class="blog-date">15 de Agosto, 2023</span>
+                        <h3 class="blog-title">Rutinas de Ejercicio en Casa</h3>
+                        <p class="blog-excerpt">Mantente activo desde la comodidad de tu hogar con estas rutinas fáciles de seguir para todos los niveles.</p>
+                        <a href="#" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center">
+                <a href="#" class="view-all">Ver todos los artículos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background-color: #333; color: white; padding: 3rem 0; margin-top: 3rem;">
+        <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px; text-align: center;">
+            <p>&copy; 2023 CMPI - Todos los derechos reservados</p>
+            <div style="margin-top: 1rem;">
+                <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-twitter"></i></a>
+                <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+                <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
