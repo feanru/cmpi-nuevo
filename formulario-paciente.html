@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Paciente - CMPI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index-todo.css">
+    <style>
+        .form-section {
+            background-color: #f8f9fa;
+            padding: 5rem 0;
+            min-height: 100vh;
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .form-header h1 {
+            color: #e12989;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .form-header p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .form-section-title {
+            color: #333;
+            margin: 2rem 0 1.5rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #e12989;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group input[type="date"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #e12989;
+            box-shadow: 0 0 0 3px rgba(225, 41, 137, 0.2);
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .radio-option input[type="radio"] {
+            margin: 0;
+        }
+
+        .submit-btn {
+            background-color: #e12989;
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: block;
+            width: 100%;
+            max-width: 300px;
+            margin: 3rem auto 0;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: #c41e75;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive styles */
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 2rem 1.5rem;
+                margin: 1rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index-todo.html" class="nav-logo">CMPI</a>
+                <div class="nav-links">
+                    <a href="formulario-paciente.html" class="nav-link active">Paciente</a>
+                    <a href="formulario-cmpi.html" class="nav-link">Solicitar CMPI</a>
+                    <a href="login.html" class="nav-link login-btn">Iniciar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1>Registro de Paciente</h1>
+                    <p>Por favor completa el siguiente formulario para agendar tu cita en el CMPI más cercano. Todos los campos son obligatorios.</p>
+                </div>
+
+                <form id="pacienteForm">
+                    <h2 class="form-section-title">INFORMACIÓN PERSONAL</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="nombre">Nombre(s):</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apellidos">Apellidos:</label>
+                            <input type="text" id="apellidos" name="apellidos" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sexo">Sexo:</label>
+                            <select id="sexo" name="sexo" required>
+                                <option value="">Selecciona una opción</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="otro">Otro</option>
+                                <option value="prefiero_no_decir">Prefiero no decirlo</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <h2 class="form-section-title">INFORMACIÓN DE CONTACTO</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="estado">Estado:</label>
+                            <select id="estado" name="estado" required>
+                                <option value="">Selecciona un estado</option>
+                                <option value="aguascalientes">Aguascalientes</option>
+                                <!-- Add more states as needed -->
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="municipio">Municipio:</label>
+                            <input type="text" id="municipio" name="municipio" required>
+                        </div>
+                        <div class="form-group" style="grid-column: span 2;">
+                            <label for="direccion">Dirección:</label>
+                            <input type="text" id="direccion" name="direccion" required>
+                        </div>
+                    </div>
+
+                    <h2 class="form-section-title">INFORMACIÓN MÉDICA</h2>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="tipo_sangre">Tipo de Sangre:</label>
+                            <select id="tipo_sangre" name="tipo_sangre" required>
+                                <option value="">Selecciona tu tipo de sangre</option>
+                                <option value="a+">A+</option>
+                                <option value="a-">A-</option>
+                                <option value="b+">B+</option>
+                                <option value="b-">B-</option>
+                                <option value="ab+">AB+</option>
+                                <option value="ab-">AB-</option>
+                                <option value="o+">O+</option>
+                                <option value="o-">O-</option>
+                                <option value="desconocido">Desconocido</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="alergias">Alergias:</label>
+                            <input type="text" id="alergias" name="alergias" placeholder="Ej: Penicilina, mariscos, etc.">
+                        </div>
+                        <div class="form-group" style="grid-column: span 2;">
+                            <label for="enfermedades">Enfermedades o condiciones médicas previas:</label>
+                            <textarea id="enfermedades" name="enfermedades" placeholder="Describe cualquier condición médica relevante"></textarea>
+                        </div>
+                        <div class="form-group" style="grid-column: span 2;">
+                            <label for="medicamentos">Medicamentos actuales:</label>
+                            <textarea id="medicamentos" name="medicamentos" placeholder="Indica los medicamentos que tomas actualmente"></textarea>
+                        </div>
+                    </div>
+
+                    <h2 class="form-section-title">INFORMACIÓN ADICIONAL</h2>
+                    <div class="form-group">
+                        <label for="seguro_medico">¿Cuentas con seguro médico?</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="seguro_si" name="tiene_seguro" value="si" required>
+                                <label for="seguro_si">Sí</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="seguro_no" name="tiene_seguro" value="no" required>
+                                <label for="seguro_no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="seguro_info" style="display: none; margin-top: 1rem;">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="aseguradora">Nombre de la Aseguradora:</label>
+                                <input type="text" id="aseguradora" name="aseguradora">
+                            </div>
+                            <div class="form-group">
+                                <label for="numero_poliza">Número de Póliza:</label>
+                                <input type="text" id="numero_poliza" name="numero_poliza">
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Enviar Registro</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mostrar/ocultar información del seguro según selección
+        const seguroSi = document.getElementById('seguro_si');
+        const seguroNo = document.getElementById('seguro_no');
+        const seguroInfo = document.getElementById('seguro_info');
+        const aseguradora = document.getElementById('aseguradora');
+        const numeroPoliza = document.getElementById('numero_poliza');
+
+        function toggleSeguroInfo() {
+            if (seguroSi.checked) {
+                seguroInfo.style.display = 'block';
+                aseguradora.required = true;
+                numeroPoliza.required = true;
+            } else {
+                seguroInfo.style.display = 'none';
+                aseguradora.required = false;
+                numeroPoliza.required = false;
+            }
+        }
+
+        seguroSi.addEventListener('change', toggleSeguroInfo);
+        seguroNo.addEventListener('change', toggleSeguroInfo);
+
+        // Manejar el envío del formulario
+        document.getElementById('pacienteForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Aquí iría la lógica para enviar el formulario
+            alert('¡Gracias por registrarte! Pronto nos pondremos en contacto contigo para confirmar tu cita.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

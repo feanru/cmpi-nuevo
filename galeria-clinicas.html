@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Clínicas - CMPI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index-todo.css">
+    <style>
+        .clinics-gallery {
+            padding: 5rem 0;
+            background-color: #f9f9f9;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            color: #e12989;
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+        }
+        
+        .clinics-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .clinic-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .clinic-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .clinic-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .clinic-info {
+            padding: 1.5rem;
+        }
+        
+        .clinic-name {
+            font-size: 1.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .clinic-detail {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 0.8rem;
+            color: #34495e;
+        }
+        
+        .clinic-detail i {
+            margin-right: 10px;
+            color: #e12989;
+            margin-top: 3px;
+        }
+        
+        .clinic-description {
+            margin-top: 1rem;
+            color: #7f8c8d;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .clinics-container {
+                grid-template-columns: 1fr;
+                padding: 0 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index-todo.html" class="nav-logo">CMPI</a>
+                <div class="nav-links">
+                    <a href="formulario-paciente.html" class="nav-link">Paciente</a>
+                    <a href="formulario-cmpi.html" class="nav-link">Solicitar CMPI</a>
+                    <a href="galeria-clinicas.html" class="nav-link active">Clínicas</a>
+                    <a href="login.html" class="nav-link login-btn">Iniciar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="clinics-gallery">
+        <div class="section-header">
+            <h1 class="section-title">Nuestras Clínicas Asociadas</h1>
+            <p class="section-subtitle">Conoce nuestra red de clínicas asociadas y encuentra la más cercana a ti</p>
+        </div>
+        
+        <div class="clinics-container">
+            <!-- Clínica 1 -->
+            <div class="clinic-card">
+                <img src="img/consulta-externa.jpg" alt="Clínica Central" class="clinic-image">
+                <div class="clinic-info">
+                    <h3 class="clinic-name">CMPI Xicotencatl</h3>
+                    <div class="clinic-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Av. Principal #123, Colonia Centro, Xicotencatl</span>
+                    </div>
+                    <div class="clinic-detail">
+                        <i class="fas fa-phone"></i>
+                        <span>55 1234 5678</span>
+                    </div>
+                    <div class="clinic-detail">
+                        <i class="fas fa-clock"></i>
+                        <span>Lun-Vie: 8:00 AM - 8:00 PM</span>
+                    </div>
+                    <div class="clinic-detail">
+                        <i class="fas fa-stethoscope"></i>
+                        <span><strong>CMPI Básico</strong></span>
+                    </div>
+                    <p class="clinic-description">Gracias al respaldo de las autoridades locales, el Centro de Medicina CMPI Xicoténcatl continúa ofreciendo atención de calidad a la comunidad.</p>
+                </div>
+            </div>
+            
+            <!-- Clínica 2 -->
+            <div class="clinic-card">
+                <img src="img/psicologia.jpg" alt="Centro Médico del Sur" class="clinic-image">
+                <div class="clinic-info">
+                    <h3 class="clinic-name">CMPI Xicotencatl</h3>
+                    <div class="clinic-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Calle Sur 456, Col. Del Valle, Xicotencatl</span>
+                    </div>
+                    <div class="clinic-detail">
+                        <i class="fas fa-phone"></i>
+                        <span>55 1234 5678</span>
+                    </div>
+                    <div class="clinic-detail">
+                        <i class="fas fa-clock"></i>
+                        <span>Lun-Sáb: 7:00 AM - 10:00 PM</span>
+                    </div>
+                    <div class="clinic-detail">
+                        <i class="fas fa-hospital"></i>
+                        <span><strong>CMPI Mayor</strong></span>
+                    </div>
+                    <p class="clinic-description">Gracias al respaldo de las autoridades locales, el Centro de Medicina CMPI Xicoténcatl continúa ofreciendo atención de calidad a la comunidad.</p>
+                </div>
+            </div>
+            
+            <!-- Clínica 3 -->
+            <div class="clinic-card">
+                <img src="img/nutricion.jpeg" alt="Clínica del Noroeste" class="clinic-image">
+                <div class="clinic-info">
+                    <h3 class="clinic-name">CMPI Xicotencatl</h3>
+                    <div class="clinic-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Blvd. Noroeste 789, Col. Industrial, Xicotencatl</span>
+                    </div>
+                    <div class="clinic-detail">
+                        <i class="fas fa-phone"></i>
+                        <span>55 1234 5678</span>
+                    </div>
+                    <div class="clinic-detail">
+                        <i class="fas fa-clock"></i>
+                        <span>Lun-Dom: 24/7</span>
+                    </div>
+                    <div class="clinic-detail">
+                        <i class="fas fa-stethoscope"></i>
+                        <span><strong>CMPI Básico</strong></span>
+                    </div>
+                    <p class="clinic-description">Gracias al respaldo de las autoridades locales, el Centro de Medicina CMPI Xicoténcatl continúa ofreciendo atención de calidad a la comunidad.</p>
+                </div>
+            </div>
+            <!-- Clínica 4 -->
+            <div class="clinic-card">
+                <img src="img/laboratorio.jpg" alt="Centro de Especialidades" class="clinic-image">
+                <div class="clinic-info">
+                    <h3 class="clinic-name">CMPI Xicotencatl</h3>
+                    <div class="clinic-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Reforma 1010, Juárez, Xicotencatl</span>
+                    </div>
+                    <div class="clinic-detail">
+                        <i class="fas fa-phone"></i>
+                        <span>55 1234 5678</span>
+                    </div>
+                    <div class="clinic-detail">
+                        <i class="fas fa-clock"></i>
+                        <span>Lun-Vie: 9:00 AM - 9:00 PM</span>
+                    </div>
+                    <div class="clinic-detail">
+                        <i class="fas fa-stethoscope"></i>
+                        <span><strong>CMPI Intermedio</strong></span>
+                    </div>
+                    <p class="clinic-description">Gracias al respaldo de las autoridades locales, el Centro de Medicina CMPI Xicoténcatl continúa ofreciendo atención de calidad a la comunidad.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="background-color: #e12989; color: white; padding: 3rem 0; text-align: center;">
+        <div class="container">
+            <p style="color: white;">© 2023 CMPI - Todos los derechos reservados</p>
+            <div style="margin-top: 1rem;">
+                <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-facebook"></i></a>
+                <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-twitter"></i></a>
+                <a href="#" style="color: white; margin: 0 10px;"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
