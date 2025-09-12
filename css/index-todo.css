@@ -694,7 +694,7 @@ textarea {
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
-    background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(224, 40, 136, 0.6)),  
+    background: linear-gradient(rgba(224, 40, 136, 0.35), rgba(224, 40, 136, 0.75)),  
                 url('../img/home.jpg') no-repeat center center/cover;
     color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -762,6 +762,8 @@ textarea {
     margin-bottom: 2.5rem;
     line-height: 1.7;
     max-width: 90%;
+    font-weight: 600;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
 }
 
 .hero-buttons {
@@ -1215,7 +1217,6 @@ p {
     transition: var(--transition);
     cursor: pointer;
     border: 2px solid var(--primary-color);
-    background: transparent;
     font-size: 0.9rem;
 }
 
