@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bolsa de Trabajo - CMPI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bolsa-trabajo.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index-todo.html" class="nav-logo"><img src="img/logo-sinFONDO-menu.png" alt="Logo CMPI" ></a>
+                <div class="nav-links">
+                    <a href="formulario-paciente.html" class="nav-link">Paciente</a>
+                    <a href="formulario-cmpi.html" class="nav-link">Solicitar CMPI</a>
+                    <a href="galeria-clinicas.html" class="nav-link">Clínicas</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="login-cmpi.html" class="nav-link login-btn">Iniciar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-work">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Únete a Nuestro Equipo Médico</h1>
+                <p>Forma parte de una red de profesionales de la salud comprometidos con la excelencia en el cuidado médico integral.</p>
+                <a href="#vacantes" class="btn btn-primary">Ver Vacantes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Work With Us -->
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">¿Por qué trabajar con nosotros?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-heartbeat"></i>
+                    <h3>Impacto Social</h3>
+                    <p>Contribuye a mejorar la salud y bienestar de comunidades que más lo necesitan.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-briefcase-medical"></i>
+                    <h3>Crecimiento Profesional</h3>
+                    <p>Oportunidades de desarrollo y capacitación continua.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Trabajo en Equipo</h3>
+                    <p>Únete a un equipo multidisciplinario de profesionales de la salud.</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-hand-holding-medical"></i>
+                    <h3>Beneficios Competitivos</h3>
+                    <p>Paquete de prestaciones superiores al mercado.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Job Listings -->
+    <section id="vacantes" class="jobs-section">
+        <div class="container">
+            <h2 class="section-title">Vacantes Disponibles</h2>
+            <div class="job-filters">
+                <input type="text" placeholder="Buscar por puesto o especialidad..." class="search-input">
+                <select class="location-filter">
+                    <option value="">Todas las ubicaciones</option>
+                    <option value="ciudad-mexico">Ciudad de México</option>
+                    <option value="estado-mexico">Estado de México</option>
+                    <option value="puebla">Puebla</option>
+                    <option value="morelos">Morelos</option>
+                </select>
+                <select class="job-type-filter">
+                    <option value="">Tipo de empleo</option>
+                    <option value="tiempo-completo">Tiempo completo</option>
+                    <option value="medio-tiempo">Medio tiempo</option>
+                    <option value="practicas">Prácticas profesionales</option>
+                </select>
+            </div>
+
+            <div class="job-listings">
+                <!-- Job Card 1 -->
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3>Médico General</h3>
+                        <span class="job-type full-time">Tiempo Completo</span>
+                    </div>
+                    <div class="job-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Oaxaca, Oaxaca</span>
+                    </div>
+                    <div class="job-description">
+                        <p>Buscamos médico general con al menos 2 años de experiencia en consulta de primer contacto, con cédula profesional y especial interés en medicina preventiva.</p>
+                        <ul class="job-requirements">
+                            <li>Licenciatura en Medicina General</li>
+                            <li>Cédula profesional</li>
+                            <li>2+ años de experiencia</li>
+                            <li>Disponibilidad de horario</li>
+                        </ul>
+                    </div>
+                    <div class="job-footer">
+                        <span class="job-salary">$1,000 MXN/mes</span>
+                        <a href="#aplicar" class="btn btn-apply">Aplicar Ahora</a>
+                    </div>
+                </div>
+
+                <!-- Job Card 2 -->
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3>Enfermera/o General</h3>
+                        <span class="job-type full-time">Tiempo Completo</span>
+                    </div>
+                    <div class="job-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Tamasopo, San Luis Potosí</span>
+                    </div>
+                    <div class="job-description">
+                        <p>Se requiere enfermera/o general para atención directa a pacientes, toma de signos vitales, aplicación de inyecciones y apoyo en consulta.</p>
+                        <ul class="job-requirements">
+                            <li>Técnico o Licenciatura en Enfermería</li>
+                            <li>Cédula profesional</li>
+                            <li>1+ año de experiencia</li>
+                            <li>Disponibilidad para turnos</li>
+                        </ul>
+                    </div>
+                    <div class="job-footer">
+                        <span class="job-salary">$1,000 MXN/mes</span>
+                        <a href="#aplicar" class="btn btn-apply">Aplicar Ahora</a>
+                    </div>
+                </div>
+
+                <!-- Job Card 3 -->
+                <div class="job-card">
+                    <div class="job-header">
+                        <h3>Nutrióloga/o</h3>
+                        <span class="job-type part-time">Medio Tiempo</span>
+                    </div>
+                    <div class="job-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Xicohténcatl, Tamaulipas</span>
+                    </div>
+                    <div class="job-description">
+                        <p>Buscamos nutrióloga/o con experiencia en consulta privada, elaboración de planes alimenticios y seguimiento nutricional personalizado.</p>
+                        <ul class="job-requirements">
+                            <li>Licenciatura en Nutrición</li>
+                            <li>Cédula profesional</li>
+                            <li>Experiencia en consulta</li>
+                            <li>Conocimientos de nutrición clínica</li>
+                        </ul>
+                    </div>
+                    <div class="job-footer">
+                        <span class="job-salary">$1,000 MXN/mes</span>
+                        <a href="#aplicar" class="btn btn-apply">Aplicar Ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Application Form -->
+    <section id="aplicar" class="application-section">
+        <div class="container">
+            <div class="application-container">
+                <div class="application-info">
+                    <h2>Envía tu solicitud</h2>
+                    <p>Completa el siguiente formulario para aplicar a cualquiera de nuestras vacantes disponibles. Nos pondremos en contacto contigo.</p>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope" style="color: #ffffff;"></i> recursos.humanos@cmpi.com</p>
+                        <p><i class="fas fa-phone" style="color: #ffffff;"></i> (55) 1234-5678</p>
+                    </div>
+                </div>
+                <form class="application-form">
+                    <div class="form-group">
+                        <label for="fullname">Nombre completo</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Teléfono</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Puesto de interés</label>
+                        <select id="position" name="position" required>
+                            <option value="">Selecciona un puesto</option>
+                            <option value="medico-general">Médico General</option>
+                            <option value="enfermera">Enfermera/o General</option>
+                            <option value="nutriologo">Nutrióloga/o</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="cv">Sube tu CV (PDF, máximo 5MB)</label>
+                        <input type="file" id="cv" name="cv" accept=".pdf" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje (opcional)</label>
+                        <textarea id="message" name="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Enviar Solicitud</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo-blanco.png" alt="Logo CMPI" class="footer-logo-img">
+                    <p>Comprometidos con tu salud y bienestar.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="index-todo.html">Inicio</a></li>
+                        <li><a href="formulario-paciente.html">Solicitar Cita</a></li>
+                        <li><a href="formulario-cmpi.html">Solicitar CMPI</a></li>
+                        <li><a href="galeria-clinicas.html">Nuestras Clínicas</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contacto</h4>
+                    <p><i class="fas fa-envelope"></i> contacto@cmpi.com</p>
+                    <p><i class="fas fa-phone"></i> (55) 1234-5678</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CMPI. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Términos y Condiciones</a>
+                    <a href="#">Aviso de Privacidad</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>

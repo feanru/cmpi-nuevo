@@ -15,13 +15,13 @@
     <nav class="main-nav">
         <div class="container">
             <div class="nav-content">
-                <a href="index-todo.html" class="nav-logo">CMPI</a>
+                <a href="index-todo.html" class="nav-logo"><img src="img/logo-sinFONDO-menu.png" alt="Logo CMPI" ></a>
                 <div class="nav-links">
                     <a href="formulario-paciente.html" class="nav-link">Paciente</a>
                     <a href="formulario-cmpi.html" class="nav-link">Solicitar CMPI</a>
                     <a href="galeria-clinicas.html" class="nav-link">Clínicas</a>
                     <a href="blog.html" class="nav-link">Blog</a>
-                    <a href="login.html" class="nav-link login-btn">Iniciar Sesión</a>
+                    <a href="login-cmpi.html" class="nav-link login-btn">Iniciar Sesión</a>
                 </div>
             </div>
         </div>
@@ -35,9 +35,9 @@
                     <img src="img/logo-blanco.png" alt="Logo CMPI" class="logo-main">
                     <p class="hero-description">Cuidando de tu salud y bienestar con atención médica integral y personalizada para toda la familia.</p>
                     <div class="hero-buttons">
-                        <a href="formulario-paciente-simple.html" class="btn btn-secondary">Solicitar Cita</a>
-                        <a href="formulario-cmpi.html" class="btn btn-secondary">Solicitar CMPI</a>
-                        <a href="galeria-clinicas.html" class="btn btn-secondary">Conoce otros CMPI</a>
+                        <a href="formulario-paciente-simple.html" class="btn-home btn-secondary">Solicitar Cita</a>
+                        <a href="formulario-cmpi.html" class="btn-home btn-secondary">Solicitar CMPI</a>
+                        <a href="galeria-clinicas.html" class="btn-home btn-secondary">Conoce otros CMPI</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -54,7 +54,7 @@
         <section class="services">
             <div class="container">
                 <div class="section-header">
-                    <h2>Servicios podemos llevar a tu comunidad gracias a un CMPI</h2>
+                    <h2>Servicios que podemos llevar a tu comunidad ¡Gracias a un CMPI!</h2>
                     <p>Ofrecemos atención integral para toda la familia</p>
                 </div>
                 <div class="services-grid">
@@ -301,6 +301,20 @@ Más detalladamente:
             <p class="section-subtitle">Conoce más sobre nuestras bases y servicios</p>
             
             <div class="bases-grid">
+
+                <!-- CMPI Micro -->
+                <div class="base-card">
+                    <div class="base-image">
+                        <img src="img/cmpi-micro.png" alt="CMPI Micro">
+                    </div>
+                    <h3>CMPI Micro</h3>
+                    <p>Unidades móviles para atención en zonas de difícil acceso.<br><br>
+                    <strong>Población:</strong> Localidades de diferente población<br><br>
+                    <strong>Servicios:</strong> Especiales o que la localidad necesite, de acuerdo a previo diagnóstico de factibilidad. Instrumentos como tele salud, sistema de información, expediente electronico (CMPI BÁSICO 1 Y 2, HEMODÍALISIS, etc.).</p>
+                    <a href="formulario-cmpi.html" class="base-cta">Solicitar Información</a>
+                </div>
+
+
                 <!-- CMPI Básico -->
                 <div class="base-card">
                     <div class="base-image">
@@ -337,17 +351,7 @@ Más detalladamente:
                     <a href="formulario-cmpi.html" class="base-cta">Solicitar Información</a>
                 </div>
 
-                <!-- CMPI Micro -->
-                <div class="base-card">
-                    <div class="base-image">
-                        <img src="img/cmpi-micro.png" alt="CMPI Micro">
-                    </div>
-                    <h3>CMPI Micro</h3>
-                    <p>Unidades móviles para atención en zonas de difícil acceso.<br><br>
-                    <strong>Población:</strong> Localidades de diferente población<br><br>
-                    <strong>Servicios:</strong> Especiales o que la localidad necesite, de acuerdo a previo diagnóstico de factibilidad. Instrumentos como tele salud, sistema de información, expediente electronico (CMPI BÁSICO 1 Y 2, HEMODÍALISIS, etc.).</p>
-                    <a href="formulario-cmpi.html" class="base-cta">Solicitar Información</a>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -500,14 +504,10 @@ Más detalladamente:
                         </div>
                     </div>
                     
-                    <div class="nota-importante">
-                        <i class="fas fa-info-circle"></i>
-                        <p><strong>NOTA:</strong> El tema del financiamiento lo tendría que abordar el coordinador durante su capacitación.</p>
-                    </div>
                 </div>
                 
                 <div class="marcha-image">
-                    <img src="img/home.jpg" alt="Cobertura Nacional" class="img-fluid">
+                    <img src="img/marcha.jpg" alt="Cobertura Nacional" class="img-fluid">
                     <div class="cobertura">
                         <i class="fas fa-map-marker-alt"></i>
                         <span>Cobertura en los 32 estados de la República Mexicana</span>
@@ -570,6 +570,31 @@ Más detalladamente:
                         <a href="blog.html" class="read-more">Leer más <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bolsa de Trabajo -->
+    <section class="unete-red" style="background: linear-gradient(135deg, #e12989 0%, #6e1a52 100%);">
+        <div class="container">
+            <div class="unete-content text-center">
+                <h2>Únete a Nuestro Equipo Médico</h2>
+                <p class="mb-4">Forma parte de una red de profesionales de la salud comprometidos con la excelencia en el cuidado médico integral.</p>
+                <a href="bolsa-trabajo.html" class="btn btn-primary">Ver Vacantes Disponibles</a>
+            </div>
+            
+            <div class="benefits-grid mt-5" style="display: grid; margin-top: 4%; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div class="benefit-card" style="background: rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 2rem; text-align: center; color: white; backdrop-filter: blur(5px);">
+                    <i class="fas fa-heartbeat mb-3" style="font-size: 2.5rem; color: #fff;"></i>
+                    <h3 style="color: white;">Impacto Social</h3>
+                    <p>Contribuye a mejorar la salud y bienestar de comunidades que más lo necesitan.</p>
+                </div>
+                
+                <div class="benefit-card" style="background: rgba(255, 255, 255, 0.1); border-radius: 10px; padding: 2rem; text-align: center; color: white; backdrop-filter: blur(5px);">
+                    <i class="fas fa-users mb-3" style="font-size: 2.5rem; color: #fff;"></i>
+                    <h3 style="color: white;">Trabajo en Equipo</h3>
+                    <p>Únete a un equipo multidisciplinario de profesionales de la salud.</p>
+                </div>
             </div>
         </div>
     </section>

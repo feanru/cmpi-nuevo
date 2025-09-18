@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesión - CMPI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/index-todo.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+
+        /* Left Section - Login Form */
+        .login-section {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 2rem;
+            background-color: #fff;
+            position: relative;
+            z-index: 1;
+            padding-top: 0;
+        }
+
+        .login-container {
+            max-width: 420px;
+            width: 100%;
+            padding: 0 2.5rem 2.5rem;
+            text-align: center;
+            position: relative;
+            margin-top: 1rem;
+        }
+        
+        .back-to-home {
+            position: absolute;
+            top: 1.5rem;
+            left: 1.5rem;
+            display: inline-flex;
+            align-items: center;
+            color: #666;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            margin-bottom: 2rem; /* Añadido espacio adicional */
+        }
+        
+        .back-to-home:hover {
+            color: #e12989;
+        }
+        
+        .back-to-home i {
+            margin-right: 0.5rem;
+            font-size: 0.9em;
+        }
+
+        .login-header {
+            margin-bottom: 2.5rem;
+        }
+
+        .login-header h1 {
+            color: #333;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .login-header p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.9rem 1.2rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #e12989;
+            box-shadow: 0 0 0 3px rgba(225, 41, 137, 0.2);
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 1rem;
+            background-color: #e12989;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 0.5rem;
+            font-family: 'Poppins', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-login:hover {
+            background-color: #c41e75;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .forgot-password {
+            display: block;
+            color: #e12989;
+            text-decoration: none;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .forgot-password:hover {
+            color: #c41e75;
+            text-decoration: underline;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            margin: 1.5rem 0;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background-color: #eee;
+            margin: 0 1rem;
+        }
+
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .social-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+            border: none;
+        }
+
+        .social-btn:hover {
+            transform: translateY(-3px);
+        }
+
+        .facebook {
+            background-color: #3b5998;
+        }
+
+        .google {
+            background-color: #db4437;
+        }
+
+        .apple {
+            background-color: #000000;
+        }
+
+        .signup-link {
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .signup-link a {
+            color: #e12989;
+            text-decoration: none;
+            font-weight: 600;
+            margin-left: 0.3rem;
+            transition: color 0.3s ease;
+        }
+
+        .signup-link a:hover {
+            color: #c41e75;
+            text-decoration: underline;
+        }
+
+        /* Tab Styles */
+        .tab-container {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            min-height: 100vh;
+            padding-top: 80px; /* Espacio para el menú de navegación */
+        }
+
+        .tab-navigation {
+            display: flex;
+            border-radius: 20px;
+            justify-content: center;
+            background-color: #f2f2f2;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            z-index: 90;
+            padding: 1.5rem 0;
+            margin: 0 0 1.5rem 0;
+            width: 100%;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .tab-btn {
+            padding: 0.75rem 2rem;
+            margin: 0 0.5rem;
+            background: none;
+            border: none;
+            font-size: 1rem;
+            font-weight: 500;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            transition: all 0.3s ease;
+            margin-right: 1rem;
+        }
+
+        .tab-btn:after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: transparent;
+            transition: all 0.3s ease;
+        }
+
+        .tab-btn.active {
+            color: #e12989;
+            font-weight: 600;
+        }
+
+        .tab-btn.active:after {
+            background-color: #e12989;
+        }
+
+        .tab-content {
+            flex: 1;
+            position: relative;
+            min-height: calc(100vh - 80px); /* Ajuste para el encabezado */
+            overflow-y: auto;
+        }
+
+        .tab-pane {
+            display: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        .tab-pane.active {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        /* Adjust login section for tab layout */
+        .login-section {
+            flex: 1;
+            min-width: 400px;
+            height: 100%;
+            overflow-y: auto;
+        }
+
+        .image-section {
+            flex: 1;
+            min-width: 400px;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .tab-pane.active {
+                flex-direction: column;
+            }
+            
+            .login-section, 
+            .image-section {
+                min-width: 100%;
+                height: auto;
+            }
+            
+            .login-section {
+                padding: 2rem 1rem;
+            }
+            
+            .image-section {
+                padding: 3rem 1rem;
+                text-align: center;
+            }
+        }
+
+        /* Right Section - Background Image */
+        .image-section {
+            flex: 1;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('img/home.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+
+        .logo-container {
+            max-width: 300px;
+            margin-bottom: 2rem;
+        }
+
+        .logo-container img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-section h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .image-section p {
+            max-width: 500px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            body {
+                flex-direction: column;
+            }
+
+            .login-section, 
+            .image-section {
+                flex: none;
+                width: 100%;
+                min-height: 50vh;
+            }
+
+            .login-container {
+                padding: 4rem 1.5rem 2rem;
+            }
+
+            .image-section {
+                padding: 3rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .login-container {
+                padding: 1.5rem 1rem;
+            }
+
+            .login-header h1 {
+                font-size: 1.7rem;
+            }
+
+            .image-section h2 {
+                font-size: 1.7rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index-todo.html" class="nav-logo"><img src="img/logo-sinFONDO-menu.png" alt="Logo CMPI" ></a>
+                <div class="nav-links">
+                    <a href="formulario-paciente.html" class="nav-link">Paciente</a>
+                    <a href="formulario-cmpi.html" class="nav-link">Solicitar CMPI</a>
+                    <a href="galeria-clinicas.html" class="nav-link">Clínicas</a>
+                    <a href="blog.html" class="nav-link">Blog</a>
+                    <a href="login-cmpi.html" class="nav-link login-btn">Iniciar Sesión</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Main Content with Tabs -->
+    <div class="tab-container">
+        <!-- Tab Content -->
+        <div class="tab-content">
+            <!-- Paciente Login Tab -->
+            <div id="paciente" class="tab-pane active">
+                <div class="login-section">
+                    <div class="tab-navigation">
+                        <button class="tab-btn active" data-tab="paciente">Paciente</button>
+                        <button class="tab-btn" data-tab="cmpi">CMPI</button>
+                    </div>
+                    <div class="login-container">
+                        <div class="login-header">
+                            <h1>Bienvenido Paciente</h1>
+                            <p>Inicia sesión para acceder a tu cuenta</p>
+                        </div>
+                        
+                        <form id="loginFormPaciente" class="login-form">
+                            <div class="form-group">
+                                <label for="email-paciente">Correo electrónico</label>
+                                <input type="email" id="email-paciente" class="form-control" placeholder="Ingresa tu correo" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <label for="password-paciente">Contraseña</label>
+                                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                                </div>
+                                <input type="password" id="password-paciente" class="form-control" placeholder="Ingresa tu contraseña" required>
+                            </div>
+                            
+                            <button type="submit" class="btn-login">Iniciar Sesión</button>
+                            
+                            <p class="signup-link">¿No tienes una cuenta? <a href="#">Regístrate</a></p>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="image-section">
+                    <div class="logo-container">
+                        <img src="img/logo-blanco.png" alt="CMPI Logo">
+                    </div>
+                    <h2>Cuidando tu salud</h2>
+                    <p style="color: #fff;">Accede a tu cuenta para gestionar tus citas, historial médico y más en nuestra plataforma de salud integral.</p>
+                </div>
+            </div>
+            
+            <!-- CMPI Login Tab -->
+            <div id="cmpi" class="tab-pane">
+                <div class="login-section">
+                    <div class="tab-navigation">
+                        <button class="tab-btn" data-tab="paciente">Paciente</button>
+                        <button class="tab-btn active" data-tab="cmpi">CMPI</button>
+                    </div>
+                    <div class="login-container">
+                        <div class="login-header">
+                            <h1>Bienvenido CMPI</h1>
+                            <p>Inicia sesión para acceder al panel de administración</p>
+                        </div>
+                        
+                        <form id="loginFormCMPI" class="login-form">
+                            <div class="form-group">
+                                <label for="email-cmpi">Correo electrónico</label>
+                                <input type="email" id="email-cmpi" class="form-control" placeholder="Ingresa tu correo" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div style="display: flex; justify-content: space-between; align-items: center;">
+                                    <label for="password-cmpi">Contraseña</label>
+                                    <a href="#" class="forgot-password">¿Olvidaste tu contraseña?</a>
+                                </div>
+                                <input type="password" id="password-cmpi" class="form-control" placeholder="Ingresa tu contraseña" required>
+                            </div>
+                            
+                            <button type="submit" class="btn-login">Iniciar Sesión</button>
+                            
+                            <p class="signup-link">¿No tienes una cuenta? <a href="#">Solicita acceso</a></p>
+                        </form>
+                    </div>
+                </div>
+                
+                <div class="image-section">
+                    <div class="logo-container">
+                        <img src="img/logo-blanco.png" alt="CMPI Logo">
+                    </div>
+                    <h2>Panel de Administración</h2>
+                    <p style="color: #fff;">Accede al panel de administración para gestionar tu clínica, personal y pacientes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // Update active state for all tab buttons
+                    document.querySelectorAll(`.tab-btn[data-tab="${tabId}"]`).forEach(btn => {
+                        btn.classList.add('active');
+                    });
+                    document.querySelectorAll(`.tab-btn:not([data-tab="${tabId}"])`).forEach(btn => {
+                        btn.classList.remove('active');
+                    });
+                    
+                    // Update active state for panes
+                    tabPanes.forEach(pane => {
+                        pane.classList.remove('active');
+                        if (pane.id === tabId) {
+                            pane.classList.add('active');
+                        }
+                    });
+                });
+            });
+            
+            // Form submission handling for Paciente
+            document.getElementById('loginFormPaciente').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('email-paciente').value;
+                const password = document.getElementById('password-paciente').value;
+                console.log('Paciente login attempt with:', { email });
+                // Implement Paciente authentication logic here
+            });
+            
+            // Form submission handling for CMPI
+            document.getElementById('loginFormCMPI').addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('email-cmpi').value;
+                const password = document.getElementById('password-cmpi').value;
+                console.log('CMPI login attempt with:', { email });
+                // Implement CMPI authentication logic here
+            });
+        });
+
+        // Social login buttons functionality (if needed in the future)
+        document.querySelectorAll('.social-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const provider = this.classList.contains('facebook') ? 'Facebook' : 
+                                this.classList.contains('google') ? 'Google' : 'Apple';
+                console.log(`Login with ${provider} clicked`);
+                // Implement social login logic here
+            });
+        });
+    </script>
+</body>
+</html>

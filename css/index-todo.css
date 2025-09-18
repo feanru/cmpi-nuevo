@@ -199,6 +199,13 @@
     transform: scale(1.2);
 }
 
+.nav-logo img {
+    width: 100px;
+    height: auto;
+    display: block;
+    pointer-events: none;
+    object-fit: contain;
+}
 
 .login-btn {
     background-color: #e12989;
@@ -654,8 +661,6 @@ textarea {
 }
 
 .clinic-detail {
-    display: flex;
-    align-items: flex-start;
     margin-bottom: 0.8rem;
     color: #34495e;
 }
@@ -1206,6 +1211,7 @@ p {
 }
 
 .btn {
+    color: var(--primary-color);
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1220,6 +1226,7 @@ p {
     font-size: 0.9rem;
 }
 
+
 .btn:hover {
     background-color: var(--primary-color);
     color: white;
@@ -1228,10 +1235,33 @@ p {
     scale: 1.2;
 }
 
+.btn-home {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem 1.25rem;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    transition: var(--transition);
+    cursor: pointer;
+    border: 2px solid var(--primary-color);
+    font-size: 0.9rem;
+}
+
+.btn-home:hover {
+    background-color: white;
+    color: var(--primary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+    scale: 1.2;
+}
+
 /* ===== Sección de Servicios ===== */
 .services {
     position: relative;
-    background: url('../img/fondo.png') center/cover;
+    background: url('../img/servicio-cmpi.jpg') center/cover;
     padding: 5rem 0;
   }
   
