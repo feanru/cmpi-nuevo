@@ -1039,7 +1039,7 @@ textarea {
 
 /* Sección Únete a Nuestra Red */
 .unete-red {
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    background: linear-gradient(135deg, #e12989, #8675f7);
     color: white;
     padding: 5rem 0;
     text-align: center;
