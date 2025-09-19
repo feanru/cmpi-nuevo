@@ -1,5 +1,57 @@
 // Inicialización del modal
 document.addEventListener('DOMContentLoaded', function() {
+    // Video Modal Functionality
+    const videoModal = document.getElementById('videoModal');
+    const videoTrigger = document.getElementById('videoTrigger');
+    const modalVideo = document.getElementById('modalVideo');
+    const closeVideoModal = document.querySelector('.close-modal');
+    
+    // Open video modal
+    function openVideoModal() {
+        videoModal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+        // Start playing the video when modal opens
+        const playPromise = modalVideo.play();
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.log('Autoplay prevented:', error);
+            });
+        }
+    }
+    
+    // Close video modal
+    function closeVideoModalHandler() {
+        videoModal.classList.remove('show');
+        document.body.style.overflow = 'auto';
+        // Pause the video when modal closes
+        modalVideo.pause();
+        modalVideo.currentTime = 0;
+    }
+    
+    // Event listeners for video modal
+    if (videoTrigger) {
+        videoTrigger.addEventListener('click', openVideoModal);
+    }
+    
+    if (closeVideoModal) {
+        closeVideoModal.addEventListener('click', closeVideoModalHandler);
+    }
+    
+    // Close modal when clicking outside the video
+    videoModal.addEventListener('click', function(e) {
+        if (e.target === videoModal) {
+            closeVideoModalHandler();
+        }
+    });
+    
+    // Close modal with ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && videoModal.classList.contains('show')) {
+            closeVideoModalHandler();
+        }
+    });
+
+    // Service Modal Functionality
     const modal = document.getElementById('serviceModal');
     const modalTitle = document.getElementById('modalServiceTitle');
     const modalDescription = document.getElementById('modalServiceDescription');

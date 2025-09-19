@@ -28,20 +28,36 @@
     </nav>
 
     <section class="hero-section">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 style="text-align: center;">Bienvenido a</h1>
-                    <img src="img/logo-blanco.png" alt="Logo CMPI" class="logo-main">
-                    <p class="hero-description">Cuidando de tu salud y bienestar con atención médica integral y personalizada para toda la familia.</p>
-                    <div class="hero-buttons">
-                        <a href="formulario-paciente-simple.html" class="btn-home btn-secondary">Solicitar Cita</a>
-                        <a href="formulario-cmpi.html" class="btn-home btn-secondary">Solicitar CMPI</a>
-                        <a href="galeria-clinicas.html" class="btn-home btn-secondary">Conoce otros CMPI</a>
-                    </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 style="text-align: center;">Bienvenido a</h1>
+                <img src="img/logo-blanco.png" alt="Logo CMPI" class="logo-main">
+                <p class="hero-description">Cuidando de tu salud y bienestar con atención médica integral y personalizada para toda la familia.</p>
+                <div class="hero-buttons">
+                    <a href="formulario-paciente-simple.html" class="btn-home btn-secondary">Solicitar Cita</a>
+                    <a href="formulario-cmpi.html" class="btn-home btn-secondary">Solicitar CMPI</a>
+                    <a href="galeria-clinicas.html" class="btn-home btn-secondary">Conoce otros CMPI</a>
                 </div>
-                <div class="hero-image">
-                    <img src="img/medico.png" alt="Salud y Bienestar" class="hero-img">
+            </div>
+            <div class="hero-image" id="videoTrigger">
+                <img src="img/medico.png" alt="Salud y Bienestar" class="hero-img" style="cursor: pointer;">
+                <div class="play-button">
+                    <i class="fas fa-play"></i>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Video Modal -->
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="video-container">
+                    <div class="video-wrapper">
+                        <video id="modalVideo" width="100%" controls autoplay>
+                            <source src="img/cmpi-home.mp4" type="video/mp4">
+                            Tu navegador no soporta el elemento de video.
+                        </video>
+                    </div>
                 </div>
             </div>
         </div>
